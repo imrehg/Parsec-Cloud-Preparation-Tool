@@ -49,7 +49,7 @@ $ScriptWebArchive = "https://github.com/imrehg/Parsec-Cloud-Preparation-Tool/arc
 $LocalArchivePath = "$ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool"  
 (New-Object System.Net.WebClient).DownloadFile($ScriptWebArchive, "$LocalArchivePath.zip")  
 Expand-Archive "$LocalArchivePath.zip" -DestinationPath $LocalArchivePath -Force  
-CD $LocalArchivePath\Parsec-Cloud-Preparation-Tool-master\ | powershell.exe .\Loader.ps1  
+powershell.exe $LocalArchivePath\Parsec-Cloud-Preparation-Tool-modded\Loader.ps1
 ```
 
 This tool supports:
