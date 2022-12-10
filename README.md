@@ -48,8 +48,9 @@ Do not select "Turn on Display Device" when setting up the instance, this will c
 $ScriptWebArchive = "https://github.com/imrehg/Parsec-Cloud-Preparation-Tool/archive/modded.zip"
 $LocalArchivePath = "$ENV:UserProfile\Downloads\Parsec-Cloud-Preparation-Tool"  
 (New-Object System.Net.WebClient).DownloadFile($ScriptWebArchive, "$LocalArchivePath.zip")  
-Expand-Archive "$LocalArchivePath.zip" -DestinationPath $LocalArchivePath -Force  
-powershell.exe $LocalArchivePath\Parsec-Cloud-Preparation-Tool-modded\Loader.ps1
+Expand-Archive "$LocalArchivePath.zip" -DestinationPath $LocalArchivePath -Force
+CD $LocalArchivePath\Parsec-Cloud-Preparation-Tool-modded\
+powershell.exe .\Loader.ps1
 ```
 
 This tool supports:
